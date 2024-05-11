@@ -1,4 +1,56 @@
+/* Custom */
+
+body {
+    background: #000;
+}
+
+#left {
+    float: left;
+    width: 60%;
+    height: 96%;
+    margin: none;
+    padding: none;
+}
+
+#div30 {
+    float: left;
+    width: 33%;
+    height: calc(50% + 16px)
+}
+
+#right {
+    float: left;
+    width: 40%;
+    height: 50%;
+    margin: none;
+    padding: none;
+}
+
+#right2 {
+    float: left;
+    width: 40%;
+    height: 50%;
+    margin-top: -32px;
+    padding: none;
+}
+
+#right2a {
+    float: left;
+    width: 50%;
+    height: 100%;
+    margin-top: -5px;
+    padding: none;
+}
+
+#ticker {
+    float: left;
+    width: 100%;
+    height: 50px;
+    margin-top: -32px;
+}
+
 /* Copyright 1999-2018. Plesk International GmbH. All rights reserved. */
+
 html {
     font: normal 13px/1.4 "-apple-system", "system-ui", "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", "Arial", sans-serif;
     -webkit-text-size-adjust: 100%;
