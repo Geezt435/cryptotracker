@@ -9,6 +9,10 @@
 
 ## Changelogs
 
+#### (1.3)
+
+- Fixed Monitor witch correct data with foreach
+
 #### (1.2)
 
 - Top News and News implementation
