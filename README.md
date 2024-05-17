@@ -9,6 +9,10 @@
 
 ## Changelogs
 
+#### (1.2)
+
+- Top News and News implementation
+
 #### (1.1)
 
 - Monitor empty or null check
@@ -16,4 +20,4 @@
 
 #### (1.0)
 
-- Default
+- Project creation
