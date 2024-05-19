@@ -5,9 +5,10 @@ $num = count($koin);
 
 <!DOCTYPE html>
 <html lang="en" dir="ltr" class="sid-plesk">
+
 <head>
-	<title>Coin Pantau</title>
-  	<link rel="icon" type="image/png" href="../image/cryptotracker.png">
+	<title>Cryptotracker Monitor</title>
+	<link rel="icon" type="image/png" href="../image/cryptotracker.png">
 	<link rel="stylesheet" href="../css/style.css">
 	<script type="text/javascript">
 		function zoom() {
@@ -135,4 +136,5 @@ $num = count($koin);
 		<!-- TradingView Widget END -->
 	</div>
 </body>
+
 </html>

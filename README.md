@@ -9,9 +9,26 @@
 
 ## Changelogs
 
+#### (1.5)
+
+Plan: 
+- Add Navigation for all pages
+- Add Appearance Theme settings with Bootstrap (Dark / Light Mode)
+- Fix Bugs
+- Restructure Monitor
+- Revamp News (ADDITIONAL BUTTON OF TOPNEWS API BUT WITH SYMBOL AS QUERY USING NEWSDATA)
+
+#### (1.4)
+
+- Added historical to existing latest list categories, interchangable (STILL BUGGED).
+- Revamped list structure.
+- Added line graph in list. (KINDA BUGGED RIGHT NOW)
+- Top News additional API News (Newsdata API).
+- Added logo for all crypto symbols. (Moralis API | STILL BUGGED).
+
 #### (1.3)
 
-- Fixed Monitor witch correct data with foreach
+- Fixed *Monitor* with correct data using *for each* method.
 
 #### (1.2)
 
