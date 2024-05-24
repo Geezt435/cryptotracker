@@ -9,21 +9,22 @@
 
 ## Changelogs
 
-#### (1.5)
+#### (1.6)
 
 Plan: 
 - Add Navigation for all pages
 - Add Appearance Theme settings with Bootstrap (Dark / Light Mode)
-- Fixed Bugs
-- Restructure Monitor
-- Chart fix
 - Revamp News (ADDITIONAL BUTTON OF TOPNEWS API BUT WITH SYMBOL AS QUERY USING NEWSDATA)
+- Fixed all bugs.
 
+#### (1.5)
+
+- Chart fix
 - Fixed Icon not appearing properly. 
 
 #### (1.4)
 
-- Added historical to existing latest list categories, interchangable (STILL BUGGED).
+- Added historical to existing latest list categories, interchangeable (STILL BUGGED).
 - Revamped list structure.
 - Added line graph in list. (KINDA BUGGED RIGHT NOW)
 - Top News additional API News (Newsdata API).
