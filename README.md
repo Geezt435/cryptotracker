@@ -14,7 +14,7 @@
 Plan: 
 - Add Navigation for all pages
 - Add Appearance Theme settings with Bootstrap (Dark / Light Mode)
-- Fix Bugs
+- Fixed Bugs
 - Restructure Monitor
 - Chart fix
 - Revamp News (ADDITIONAL BUTTON OF TOPNEWS API BUT WITH SYMBOL AS QUERY USING NEWSDATA)
