@@ -93,47 +93,46 @@ $num = count($koin);
 </head>
 
 <body>
+	<!-- TradingView Widget BEGIN -->
+	<div class="tradingview-widget-container">
+		<div class="tradingview-widget-container__widget"></div>
+		<div class="tradingview-widget-copyright">
+			<a href="https://id.tradingview.com/" rel="noopener nofollow" target="_blank">
+				<span class="blue-text" style="visibility:hidden;">Lacak seluruh pasar di TradingView</span>
+			</a>
+		</div>
+		<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
+			{
+				"symbols": [
+					<?php
+					$i = 0;
+					foreach ($koin as $coin) {
+						$i++;
+					?> {
+							"description": "",
+							"proName": "<?php echo $coin . "USDT"; ?>"
+						}
+					<?php
+						if ($i != $num)
+							echo ",";
+					}
+					?>
+				],
+				"showSymbolLogo": true,
+				"isTransparent": false,
+				"displayMode": "regular",
+				"colorTheme": "dark",
+				"locale": "id"
+			}
+		</script>
+	</div>
+	<!-- TradingView Widget END -->
+
 	<div id="left">
 		<!-- Widgets will be dynamically added here by JavaScript -->
 	</div>
 	<div id="right">
 		<!-- Widgets will be dynamically added here by JavaScript -->
-	</div>
-	<div id="ticker">
-		<!-- TradingView Widget BEGIN -->
-		<div class="tradingview-widget-container">
-			<div class="tradingview-widget-container__widget"></div>
-			<div class="tradingview-widget-copyright">
-				<a href="https://id.tradingview.com/" rel="noopener nofollow" target="_blank">
-					<span class="blue-text" style="visibility:hidden;">Lacak seluruh pasar di TradingView</span>
-				</a>
-			</div>
-			<script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-ticker-tape.js" async>
-				{
-					"symbols": [
-						<?php
-						$i = 0;
-						foreach ($koin as $coin) {
-							$i++;
-						?> {
-								"description": "",
-								"proName": "<?php echo $coin . "USDT"; ?>"
-							}
-						<?php
-							if ($i != $num)
-								echo ",";
-						}
-						?>
-					],
-					"showSymbolLogo": true,
-					"isTransparent": false,
-					"displayMode": "adaptive",
-					"colorTheme": "dark",
-					"locale": "id"
-				}
-			</script>
-		</div>
-		<!-- TradingView Widget END -->
 	</div>
 </body>
 

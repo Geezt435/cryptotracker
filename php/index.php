@@ -1,28 +1,3 @@
-<?php
-require 'vendor/autoload.php';
-
-use GuzzleHttp\Client;
-
-$client = new Client([
-    'base_uri' => 'https://cryptofonts-token-icon-api1.p.rapidapi.com/',
-    'timeout'  => 2.0,
-]);
-
-try {
-    $response = $client->request('GET', '1/0x7d1afa7b718fb893db30a3abc0cfc608aacfebb0', [
-        'headers' => [
-            'X-RapidAPI-Key' => '3b883dceb5msh6e7a3715d5c8efdp188dd1jsn4e277ce5e234',
-            'X-RapidAPI-Host' => 'cryptofonts-token-icon-api1.p.rapidapi.com'
-        ]
-    ]);
-
-    $data = json_decode($response->getBody()->getContents(), true);
-    print_r($data);
-} catch (Exception $e) {
-    echo 'Caught exception: ',  $e->getMessage(), "\n";
-}
-?>
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -31,6 +6,7 @@ try {
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cryptotracker Main</title>
   <link rel="icon" type="image/png" href="../image/cryptotracker.png">
+  <link href="../css/cryptofont/cryptofont.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
@@ -50,7 +26,6 @@ try {
         <thead>
           <tr>
             <th>Rank</th>
-            <th>Name</th>
             <th>Symbol</th>
             <th>Price (IDR)</th>
             <th>Volume (IDR)</th>
@@ -64,8 +39,6 @@ try {
     </div>
     <div id="widgetContainer" class="d-flex justify-content-center align-items-center mt-3"></div>
 
-    <!-- Bootstrap Modal -->
-    <!-- Warning Modal -->
     <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="warningModalLabel" aria-hidden="true">
       <div class="modal-dialog" role="document">
         <div class="modal-content">
@@ -83,8 +56,7 @@ try {
     </div>
   </div>
 
-  <!-- Scripts -->
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap4.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>

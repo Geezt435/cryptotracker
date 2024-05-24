@@ -16,7 +16,10 @@ Plan:
 - Add Appearance Theme settings with Bootstrap (Dark / Light Mode)
 - Fix Bugs
 - Restructure Monitor
+- Chart fix
 - Revamp News (ADDITIONAL BUTTON OF TOPNEWS API BUT WITH SYMBOL AS QUERY USING NEWSDATA)
+
+- Fixed Icon not appearing properly. 
 
 #### (1.4)
 
@@ -24,7 +27,7 @@ Plan:
 - Revamped list structure.
 - Added line graph in list. (KINDA BUGGED RIGHT NOW)
 - Top News additional API News (Newsdata API).
-- Added logo for all crypto symbols. (Moralis API | STILL BUGGED).
+- Added logo for all crypto symbols. (Moralis API // Cryptofont | STILL BUGGED).
 
 #### (1.3)
 
