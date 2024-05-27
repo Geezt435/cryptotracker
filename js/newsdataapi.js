@@ -23,7 +23,18 @@ document.addEventListener('DOMContentLoaded', function () {
                             }
                         }
                     },
-                    { data: 'pubDate' }],
+                    {
+                        data: 'creator'
+                    },
+                    {
+                        data: 'pubDate',
+                        render: function (data, type, row) {
+                            const date = new Date(data);
+                            const formattedDate = date.toLocaleString('en-US', { year: 'numeric', month: '2-digit', day: '2-digit', hour: '2-digit', minute: '2-digit', second: '2-digit' });
+                            return formattedDate;
+                        }
+                    }
+                ],
                 order: [[0, 'asc']],
                 paging: true,
                 pageLength: 10

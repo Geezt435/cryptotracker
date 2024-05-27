@@ -11,15 +11,13 @@
 
 #### (1.6)
 
-Plan: 
-- Add Navigation for all pages
-- Add Appearance Theme settings with Bootstrap (Dark / Light Mode)
-- Revamp News (ADDITIONAL BUTTON OF TOPNEWS API BUT WITH SYMBOL AS QUERY USING NEWSDATA)
-- Fixed all bugs.
+- Add a navigation panel.
+- Revamp top news and Index page visual.
+- Fixed all known bugs.
 
 #### (1.5)
 
-- Chart fix
+- Chart fix.
 - Fixed Icon not appearing properly. 
 
 #### (1.4)
