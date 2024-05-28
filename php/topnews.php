@@ -31,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-newspaper"></i> News</a>
+                        <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-newspaper"></i> Top News</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.php"><i class="fas fa-chart-line"></i> Main</a>

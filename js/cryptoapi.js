@@ -99,14 +99,17 @@ $(document).ready(function () {
     });
   }
 
+  // Initial fetch data
   fetchData('latest');
 
+  // Monitor button visibility
   $('#listingType').change(function () {
     const listingType = $(this).val();
     $('#coinTable').DataTable().destroy();
     fetchData(listingType);
   });
 
+  // Monitor button click event
   $('#monitorBtn').on('click', function () {
     const selectedSymbols = [];
     $('#coinTable tbody input[type="checkbox"]:checked').each(function () {
@@ -122,11 +125,7 @@ $(document).ready(function () {
     }
   });
 
-  $('#topnewsBtn').on('click', function () {
-    const monitorUrl = `topnews.php`;
-    window.open(monitorUrl, '_blank');
-  });
-
+  // Cointable button click event
   $('#coinTable tbody').on('click', 'button', function () {
     const data = $('#coinTable').DataTable().row($(this).parents('tr')).data();
     console.log(data);

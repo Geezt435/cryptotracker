@@ -28,7 +28,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item">
-              <a class="nav-link" href="topnews.php"><i class="fas fa-newspaper"></i> News</a>
+              <a class="nav-link" href="topnews.php"><i class="fas fa-newspaper"></i> Top News</a>
             </li>
             <li class="nav-item">
               <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-chart-line"></i> Main</a>
@@ -42,7 +42,6 @@
     <div class="container">
       <h3 class="my-4 text-center">Data Koin Cryptocurrency</h3>
       <button id="monitorBtn" class="btn btn-primary mb-3">Monitor</button>
-      <button id="topnewsBtn" class="btn btn-success mb-3">Top News</button>
       <select id="listingType">
         <option value="latest">Latest</option>
         <option value="historical">Historical</option>

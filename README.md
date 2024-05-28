@@ -9,6 +9,10 @@
 
 ## Changelogs
 
+#### (1.7)
+
+- Removed underlined top news button.
+
 #### (1.6)
 
 - Add a navigation panel.
