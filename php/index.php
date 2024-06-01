@@ -6,10 +6,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Cryptotracker Main</title>
   <link rel="icon" type="image/png" href="../image/cryptotracker.png">
+  <link href="../css/cryptofont/nav.css" rel="stylesheet">
   <link href="../css/cryptofont/cryptofont.css" rel="stylesheet">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link href="https://cdn.datatables.net/1.11.4/css/dataTables.bootstrap4.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+  <style>
+    .watchlist-form {
+      display: flex;
+      align-items: center;
+      gap: 0px;
+    }
+    .watchlist-form input {
+      max-width: 400px; /* Atur lebar input sesuai keinginan, contoh: 300px */
+    }
+  </style>
 </head>
 
 <body>
@@ -35,12 +47,25 @@
             </li>
           </ul>
         </div>
+
+        <!-- Light / Dark Mode -->
+        <div class="themeBtn">
+          <div class="btn__indicator">
+            <div class="btn__icon-container">
+              <i class="btn__icon fa-solid"></i>
+            </div>
+          </div>
+        </div>
       </div>
     </nav>
 
     <!-- Main Body -->
     <div class="container">
       <h3 class="my-4 text-center">Data Koin Cryptocurrency</h3>
+      <div class="d-flex justify-content-start align-items-center mb-3 watchlist-form">
+        <label for="watchlistInput" class="form-label mb-0 mx-2">Watchlist:</label>
+        <input type="text" class="form-control" id="watchlistInput" placeholder="Masukkan simbol pisahkan dengan koma">
+      </div>
       <button id="monitorBtn" class="btn btn-primary mb-3">Monitor</button>
       <select id="listingType">
         <option value="latest">Latest</option>
@@ -82,12 +107,11 @@
     </div>
   </div>
 
+  <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
   <script src="https://cdn.datatables.net/1.11.4/js/jquery.dataTables.min.js"></script>
   <script src="https://cdn.datatables.net/1.11.4/js/dataTables.bootstrap4.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.min.js"></script>
   <script src="../js/cryptoapi.js"></script>
 </body>
 

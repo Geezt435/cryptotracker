@@ -9,9 +9,13 @@
 
 ## Changelogs
 
+#### (1.8)
+
+- Added watchlist check with on change feature.
+
 #### (1.7)
 
-- Removed underlined top news button.
+- Removed the underlined top news button.
 
 #### (1.6)
 

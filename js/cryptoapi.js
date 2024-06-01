@@ -14,66 +14,71 @@ $(document).ready(function () {
       method: 'GET',
       headers: headers
     })
-    .then(response => {
-      if (!response.ok) {
-        throw new Error('Network response was not ok');
-      }
-      return response.json();
-    })
-    .then(data => {
-      const coinTable = $('#coinTable').DataTable({
-        data: data.data,
-        columns: [
-          { data: 'cmc_rank' },
-          {
-            data: null,
-            render: function (data, type, row) {
-              return '<i class="cf cf-' + row.symbol.toLowerCase() + '"></i> ' + data.symbol;
+      .then(response => {
+        if (!response.ok) {
+          throw new Error('Network response was not ok');
+        }
+        return response.json();
+      })
+      .then(data => {
+        const coinTable = $('#coinTable').DataTable({
+          data: data.data,
+          columns: [
+            { data: 'cmc_rank' },
+            {
+              data: null,
+              render: function (data, type, row) {
+                return '<i class="cf cf-' + row.symbol.toLowerCase() + '"></i> ' + data.symbol;
+              }
+            },
+            {
+              data: 'quote.IDR.price',
+              render: function (data, type, row) {
+                return parseFloat(data).toLocaleString('id-ID', { style: 'currency', currency: 'IDR' });
+              }
+            },
+            {
+              data: 'quote.IDR.volume_24h',
+              render: function (data, type, row) {
+                return parseFloat(data).toLocaleString('id-ID', { style: 'currency', currency: 'IDR' });
+              }
+            },
+            {
+              data: null,
+              render: function (data, type, row) {
+                return `<div class="tradingview-widget-container" id="chart_${row.symbol}"></div>`;
+              }
+            },
+            {
+              data: null,
+              render: function (data, type, row) {
+                return '<input type="checkbox" name="' + row.symbol + '" value="' + row.symbol + '">';
+              }
+            },
+            {
+              data: null,
+              render: function (data, type, row) {
+                return '<button onclick="window.open(\'https://www.tradingview.com/symbols/' + row.symbol + '/news/\', \'_blank\')" class="btn btn-primary">News</button>';
+              }
             }
-          },
-          {
-            data: 'quote.IDR.price',
-            render: function (data, type, row) {
-              return parseFloat(data).toLocaleString('id-ID', { style: 'currency', currency: 'IDR' });
-            }
-          },
-          {
-            data: 'quote.IDR.volume_24h',
-            render: function (data, type, row) {
-              return parseFloat(data).toLocaleString('id-ID', { style: 'currency', currency: 'IDR' });
-            }
-          },
-          {
-            data: null,
-            render: function (data, type, row) {
-              return `<div class="tradingview-widget-container" id="chart_${row.symbol}"></div>`;
-            }
-          },
-          {
-            data: null,
-            render: function (data, type, row) {
-              return '<input type="checkbox" name="' + row.symbol + '" value="' + row.symbol + '">';
-            }
-          },
-          {
-            data: null,
-            render: function (data, type, row) {
-              return '<button onclick="window.open(\'https://www.tradingview.com/symbols/' + row.symbol + '/news/\', \'_blank\')" class="btn btn-primary">News</button>';
-            }
-          }
-        ],
-        order: [[0, 'asc']],
-        retrieve: true,
-        destroy: true,
-        pageLength: 10
-      });
+          ],
+          order: [[0, 'asc']],
+          retrieve: true,
+          destroy: true,
+          pageLength: 10
+        });
 
-      // Initialize the charts after the table is drawn, only once
-      initializeCharts(data.data);
-    })
-    .catch(error => {
-      console.error('Terjadi kesalahan: ', error);
-    });
+        $('#watchlistInput').on('input', function () {
+          const watchlistInput = $(this).val().split(',').map(item => item.trim());
+          coinTable.columns([1]).search(watchlistInput.join('|'), true, false).draw();
+        });
+
+        // Initialize the charts after the table is drawn, only once
+        initializeCharts(data.data);
+      })
+      .catch(error => {
+        console.error('Terjadi kesalahan: ', error);
+      });
   }
 
   function initializeCharts(data) {
@@ -84,8 +89,8 @@ $(document).ready(function () {
       script.src = 'https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js';
       script.innerHTML = `{
       "symbol": "${row.symbol}",
-      "width": "150",
-      "height": "100",
+      "width": "200",
+      "height": "120",
       "locale": "en",
       "dateRange": "1M",
       "colorTheme": "light",
@@ -124,6 +129,13 @@ $(document).ready(function () {
       window.open(monitorUrl, '_blank');
     }
   });
+
+  // Event listener for Enter key
+  // $('#watchlistInput').on('keypress', function (e) {
+  //   if (e.which === 13) {
+  //     $('#filterBtn').click();
+  //   }
+  // });
 
   // Cointable button click event
   $('#coinTable tbody').on('click', 'button', function () {
