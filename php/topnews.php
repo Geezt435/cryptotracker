@@ -25,13 +25,19 @@
                 <img src="../image/cryptotracker.png" alt="Cryptotracker" width="30" height="30">
                 Cryptotracker
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-newspaper"></i> Top News</a>
+                        <a class="nav-link" href="portofolios.php"><i class="fas fa-newspaper"></i>
+                            Portofolio</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#"><i class="fas fa-newspaper"></i> Top
+                            News</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="index.php"><i class="fas fa-chart-line"></i> Main</a>
@@ -49,17 +55,18 @@
             <div class="tradingview-widget-container">
                 <!-- TradingView Widget BEGIN -->
                 <div class="tradingview-widget-container__widget"></div>
-                <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
-                    {
-                        "feedMode": "all_symbols",
-                        "isTransparent": false,
-                        "displayMode": "adaptive",
-                        "width": "100%",
-                        "height": 500,
-                        "colorTheme": "light",
-                        "locale": "en"
-                    }
-                </script>
+                <script type="text/javascript"
+                    src="https://s3.tradingview.com/external-embedding/embed-widget-timeline.js" async>
+                        {
+                            "feedMode": "all_symbols",
+                                "isTransparent": false,
+                                    "displayMode": "adaptive",
+                                        "width": "100%",
+                                            "height": 500,
+                                                "colorTheme": "light",
+                                                    "locale": "en"
+                        }
+                    </script>
             </div>
         </div>
         <!-- Crypto News Tables -->
@@ -128,7 +135,7 @@
             </div>
         </div>
 
-        
+
         <!-- Crypto News Table  -->
         <div class="d-flex justify-content-center align-items-center">
             <table id="cryptoNews" class="table table-striped table-bordered text-center">
@@ -152,7 +159,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="../js/newsdataapi.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
             $('#forex-table').DataTable({
                 responsive: true,
                 language: {

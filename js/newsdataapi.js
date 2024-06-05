@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     const baseUrl = "https://newsdata.io/api/1/latest?apikey=pub_4446039d7a410b51eb639632bffca07f72581&q=cryptocurrency&language=en";
 
-    fetch(baseUrl)+88
+    fetch(baseUrl)
         .then(response => response.json())
         .then(data => {
             const coinTable = $('#cryptoNews').DataTable({

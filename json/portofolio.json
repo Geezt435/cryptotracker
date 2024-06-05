@@ -1,0 +1,18 @@
+
+    [
+        {
+            "name": "Bitcoin",
+            "symbol": "BTCUSD",
+            "market": "BITSTAMP",
+            "owned": 100,
+            "curPrice": 1120627949
+        },
+        {
+            "name": "Ethereum",
+            "symbol": "ETHUSD",
+            "market": "BITSTAMP",
+            "owned": 10,
+            "curPrice": 61144700
+            
+        }
+    ]

@@ -9,6 +9,12 @@
 
 ## Changelogs
 
+#### (1.9)
+
+- Fixed the top news page not following protocol.
+- Added portofolios page.
+- Changed news to be handled by own website.
+
 #### (1.8)
 
 - Added watchlist check with on change feature.

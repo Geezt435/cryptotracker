@@ -58,7 +58,7 @@ $(document).ready(function () {
             {
               data: null,
               render: function (data, type, row) {
-                return '<button onclick="window.open(\'https://www.tradingview.com/symbols/' + row.symbol + '/news/\', \'_blank\')" class="btn btn-primary">News</button>';
+                return '<button onclick="window.open(\'news.php?symbol=' + row.symbol + '\', \'_blank\')" class="btn btn-primary">News</button>';
               }
             }
           ],

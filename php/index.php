@@ -18,8 +18,10 @@
       align-items: center;
       gap: 0px;
     }
+
     .watchlist-form input {
-      max-width: 400px; /* Atur lebar input sesuai keinginan, contoh: 300px */
+      max-width: 400px;
+      /* Atur lebar input sesuai keinginan, contoh: 300px */
     }
   </style>
 </head>
@@ -34,11 +36,16 @@
           <img src="../image/cryptotracker.png" alt="Cryptotracker" width="30" height="30">
           Cryptotracker
         </a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="portofolios.php"><i class="fas fa-newspaper"></i>
+                Portofolio</a>
+            </li>
             <li class="nav-item">
               <a class="nav-link" href="topnews.php"><i class="fas fa-newspaper"></i> Top News</a>
             </li>
@@ -89,7 +96,8 @@
       </div>
       <div id="widgetContainer" class="d-flex justify-content-center align-items-center mt-3"></div>
 
-      <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="warningModalLabel" aria-hidden="true">
+      <div class="modal fade" id="warningModal" tabindex="-1" role="dialog" aria-labelledby="warningModalLabel"
+        aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
             <div class="modal-header">
@@ -99,7 +107,8 @@
               Monitor requires at least one coin to be selected.
             </div>
             <div class="modal-footer">
-              <button type="button" class="btn btn-danger close" data-bs-dismiss="modal" aria-label="Close">Close</button>
+              <button type="button" class="btn btn-danger close" data-bs-dismiss="modal"
+                aria-label="Close">Close</button>
             </div>
           </div>
         </div>
